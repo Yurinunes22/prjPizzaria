@@ -233,8 +233,13 @@ font-size: 1.25rem;
 
 
 .carrinho{
+    margin: auto;
     background-color: #E5F4FF;
  display: flex;
+ width: fit-content;
+ padding: 24px;
+ border: 2px solid black;
+ 
 }
 
 .carrinho__titulo{
@@ -250,11 +255,13 @@ padding: 16px;
 
 .carrinho__img img {
     width: 100%;
+    
 }
 
 
 
 .carrinho__detalhes{
+    
  display: flex;
  flex-direction: column;
  justify-content: flex-start;
@@ -266,7 +273,8 @@ padding: 16px;
 }
 
 .carrinho__itens{
-    gap: 32px;
+    padding: 30px;
+    gap: 50px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -285,27 +293,71 @@ padding: 16px;
     overflow: hidden;
 }
 
-.carrinho__preco-final{
-    display: flex;
-    
-    flex-direction: column;
+.carrinho__controle-unidade button{
+    padding: 24px;
+    border-radius: 16px;
+
 }
 
-.carrinho__subtotal{
+.carrinho__controle-unidade button:hover{
+    background-color: #a9a9a9;
+}
+
+
+.carrinho__preco-final {
     display: flex;
-    justify-content: space-between;
-padding: 24px;
+    gap: 16px;
+    flex-direction: column;
+
+}
+.carrinho__subtotal{
+    padding: 24px;
+    border-top:1px solid #1298f8;   
 }
 
 .carrinho__desconto{
-    display: flex;
-    justify-content: space-between;
-padding: 24px;
+    padding: 24px;
+    border-top:1px solid #1298f8;   
+}
+.carrinho__valor-Total{
+    padding: 24px;
+    border-top:1px solid #1298f8;   
 }
 
-.carrinho__valor-total{
-    display: flex;
-    justify-content: space-between;
-padding: 24px;
+.texto-preco-final{
+    font-size: 24px;
+    font-family: var(--font-bold);
+    color: var(--color-azul-escuro);
+    
 }
 
+.preco-final-sub{
+    font-size: 24px;
+    font-family: var(--font-light);
+}
+
+
+.preco-final{
+    
+    font-size: 28px;
+    font-family: var(--font-bold);
+}
+
+.texto-preco-final-total{
+    font-size: 28px;
+    font-family: var(--font-bold);
+    color: var(--color-azul-escuro);
+
+}
+
+.carrinho__btn-finalizar-compra {
+    display: flex;
+    justify-content: center;
+    background-color: #48D05F;
+    border-radius: 20px;
+    padding: 16px 32px 16px 32px;
+}
+
+.carrinho__btn-finalizar-compra:hover{
+    background-color: seagreen;
+}
