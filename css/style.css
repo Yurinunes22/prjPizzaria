@@ -229,3 +229,83 @@ font-size: 1.25rem;
     text-transform: uppercase;
 } */
 
+/* CARRINHO */
+
+
+.carrinho{
+    background-color: #E5F4FF;
+ display: flex;
+}
+
+.carrinho__titulo{
+font-family: var(--font-bold);
+font-size: 28px;
+padding: 16px;
+}
+.carrinho__img{
+    width: 100px;
+    
+
+}
+
+.carrinho__img img {
+    width: 100%;
+}
+
+
+
+.carrinho__detalhes{
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+}
+
+.carrinho__preco {
+    display: flex;
+    flex-direction: column;
+}
+
+.carrinho__itens{
+    gap: 32px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: var(--font-light);
+}
+
+.carrinho__controle-unidade{
+    background-color: #eeeeee;
+    border-radius: 16px;
+    width: 162px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.carrinho__preco-final{
+    display: flex;
+    
+    flex-direction: column;
+}
+
+.carrinho__subtotal{
+    display: flex;
+    justify-content: space-between;
+padding: 24px;
+}
+
+.carrinho__desconto{
+    display: flex;
+    justify-content: space-between;
+padding: 24px;
+}
+
+.carrinho__valor-total{
+    display: flex;
+    justify-content: space-between;
+padding: 24px;
+}
+
