@@ -311,15 +311,21 @@ padding: 16px;
 
 }
 .carrinho__subtotal{
+    display: flex;
+    justify-content: space-between;
     padding: 24px;
     border-top:1px solid #1298f8;   
 }
 
 .carrinho__desconto{
+    display: flex;
+    justify-content: space-between;
     padding: 24px;
     border-top:1px solid #1298f8;   
 }
 .carrinho__valor-Total{
+    display: flex;
+    justify-content: space-between;
     padding: 24px;
     border-top:1px solid #1298f8;   
 }
@@ -332,6 +338,7 @@ padding: 16px;
 }
 
 .preco-final-sub{
+    
     font-size: 24px;
     font-family: var(--font-light);
 }
