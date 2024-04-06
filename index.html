@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./image/favicon-16x16.png" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/525d0387dc.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/525d0387dc.js" crossorigin="anonymous"></script> -->
     <script src="./js/main.js" defer></script>
 </head>
 
@@ -83,7 +83,7 @@
             <div class="cards-area__card">
                 <img class="cards-area__image" src="./image/img-produto01.png" alt="Imagem da pizza muçarela">
                 <button class="cards-area__botao-add">
-                    <i class="fa-solid fa-circle-plus"></i>
+                    <i class="fa-solid fa-circle-plus">+</i>
                 </button>
                 <span class="cards-area__preco">R$ 99,99</span>
                 <span class="cards-area__titulo">Muçarela</span>
@@ -130,6 +130,63 @@
             </div>
         </section>
 
+        <aside class="carrinho">
+            <div class="carrinho__detalhes">
+                <span class="carrinho__titulo">Suas Pizzas</span>
+                <div class="carrinho__itens">
+                    <div class="carrinho__img">
+                        <img src="./image/img-produto01.png" alt="Imagem de uma pizza ">
+                    </div>
+                    <div class="carrinho__preco">
+                        <span>minha pizza</span>
+                        <span>R$ 20,00</span>
+                    </div>
+                    <div class="carrinho__controle-unidade">
+                        <button><i class="fa-solid fa-plus">+</i></button>
+                        <span class="carrinho__texto-quant">1</span>
+                        <button><i class="fa-solid fa-minus">-</i></button>
+                    </div>
+    
+                </div>
+    
+    
+                <div class="carrinho__itens">
+                    <div class="carrinho__img">
+                        <img src="./image/img-produto01.png" alt="Imagem de uma pizza ">
+                    </div>
+                    <div class="carrinho__preco">
+                        <span>minha pizza</span>
+                        <span>R$ 20,00</span>
+                    </div>
+                    <div class="carrinho__controle-unidade">
+                        <button><i class="fa-solid fa-plus">+</i></button>
+                        <span class="carrinho__texto-quant"></span>
+                        <button><i class="fa-solid fa-minus">-</i></button>
+                    </div>
+    
+                </div>
+    
+    
+                <div class="carrinho__preco-final">
+                    <div class="carrinho__subtotal">
+                        <span class="texto-preco-final">Subtotal</span>
+                        <span class="preco-final-sub">R$ 150,00</span>
+                    </div>
+                    <div class="carrinho__desconto">
+                        <span class="texto-preco-final">Desconto (-10%)</span>
+                        <span class="preco-final-sub">R$ 15,00</span>
+                    </div>
+                    <div class="carrinho__valor-Total">
+                        <span class="texto-preco-final-total">Total</span>
+                        <span class="preco-final">R$ 135,00</span>
+                    </div>
+                    <div class="carrinho__btn-finalizar-compra">
+                        <button>Finalizar Compra</button>
+                    </div>
+    
+                </div>
+        </aside>
+
 
     </main>
     <footer class="rodape">
@@ -161,15 +218,15 @@
                     dignissimos placeat doloremque, </p>
                 <p class="modal__texto texto--maiusculo">Tamanho</p>
                 <div class="modal__tamanho-area">
-                    <button>
+                    <button class="Pizza-P">
                         <span class="modal__texto texto--negrito">PEQUENA</span>
                         <span class="modal__texto-peso">320g</span>
                     </button>
-                    <button>
+                    <button class="Pizza-M">
                         <span class="modal__texto texto--negrito">MÉDIA</span>
                         <span class="modal__texto-peso">530g</span>
                     </button>
-                    <button>
+                    <button class="Pizza-G">
                         <span class="modal__texto texto--negrito">GRANDE</span>
                         <span class="modal__texto-peso">860g</span>
                     </button>
@@ -179,15 +236,15 @@
                 <div class="modal__preco-area">
                     <span class="modal__texto-preco-pizza ">99,99</span>
                     <div class="modal__controle-unidade">
-                        <button><i class="fa-solid fa-plus"></i></button>
-                        <span class="modal__texto-quant">1</span>
-                        <button><i class="fa-solid fa-minus"></i></button>
+                        <button class="btnAdd"><i class="fa-solid fa-plus" >+</i></button>
+                        <span id="modal__texto-quant">1</span>
+                        <button class="btnMenos"><i class="fa-solid fa-minus">-</i></button>
 
                     </div>
 
                 </div>
                 <div class="modal__btns-area">
-                    <button class="botao botao--verde">
+                    <button class="botao botao--verde" id="modal__botao-adicionar">
                         Adicionar ao carrinho
                     </button>
                     <button class="botao botao--vermelho">
@@ -201,64 +258,7 @@
     </div>
     </div>
     <br>
-    <div class="carrinho">
-
-        <div class="carrinho__detalhes">
-            <span class="carrinho__titulo">Suas Pizzas</span>
-            <div class="carrinho__itens">
-                <div class="carrinho__img">
-                    <img src="./image/img-produto01.png" alt="Imagem de uma pizza ">
-                </div>
-                <div class="carrinho__preco">
-                    <span>minha pizza</span>
-                    <span>R$ 20,00</span>
-                </div>
-                <div class="carrinho__controle-unidade">
-                    <button><i class="fa-solid fa-plus"></i></button>
-                    <span class="carrinho__texto-quant">1</span>
-                    <button><i class="fa-solid fa-minus"></i></button>
-                </div>
-
-            </div>
-
-
-            <div class="carrinho__itens">
-                <div class="carrinho__img">
-                    <img src="./image/img-produto01.png" alt="Imagem de uma pizza ">
-                </div>
-                <div class="carrinho__preco">
-                    <span>minha pizza</span>
-                    <span>R$ 20,00</span>
-                </div>
-                <div class="carrinho__controle-unidade">
-                    <button><i class="fa-solid fa-plus"></i></button>
-                    <span class="carrinho__texto-quant">1</span>
-                    <button><i class="fa-solid fa-minus"></i></button>
-                </div>
-
-            </div>
-
-
-            <div class="carrinho__preco-final">
-                <div class="carrinho__subtotal">
-                    <span class="texto-preco-final">Subtotal</span>
-                    <span class="preco-final-sub">R$ 150,00</span>
-                </div>
-                <div class="carrinho__desconto">
-                    <span class="texto-preco-final">Desconto (-10%)</span>
-                    <span class="preco-final-sub">R$ 15,00</span>
-                </div>
-                <div class="carrinho__valor-Total">
-                    <span class="texto-preco-final-total">Total</span>
-                    <span class="preco-final">R$ 135,00</span>
-                </div>
-                <div class="carrinho__btn-finalizar-compra">
-                    <button>Finalizar Compra</button>
-                </div>
-
-            </div>
-
-        </div>
+   
 
 
 </body>

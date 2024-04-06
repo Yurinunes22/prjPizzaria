@@ -1,8 +1,15 @@
 const botaoAdicionarPizza=document.querySelectorAll(".cards-area__botao-add");
 console.log(botaoAdicionarPizza);
-const modal=document.querySelector(".bkg-modal");
 const botaoCancelar=document.querySelector(".botao--vermelho");
-const botaoplus=document.querySelector(".fa-plus");
+const btnAdd=document.querySelector(".btnAdd");
+const btnMenos=document.querySelector(".btnMenos");
+const botaoAdicionarAoCarrinho = document.querySelector('#modal__botao-adicionar');
+const carrinho = document.querySelector('.carrinho');
+const modal=document.querySelector(".bkg-modal");
+let quantidadepizza = parseFloat(document.getElementById('modal__texto-quant').innerHTML);
+
+
+
 
 for (let i = 0; i < botaoAdicionarPizza.length; i++) {
     botaoAdicionarPizza[i].addEventListener('click',()=>{
@@ -11,14 +18,38 @@ for (let i = 0; i < botaoAdicionarPizza.length; i++) {
     })
 }
 
-botaoCancelar.addEventListener('click',()=>{
-    modal.classList.remove("bkg-modal--ativo");
-})
+// botaoCancelar.addEventListener('click',()=>{
+//     modal.classList.remove('bkg-modal--ativo');
+// })
 
-let count = 0
-const btnadc = document.getElementById("count")
+ function fecharModal(){
+     const modal=document.querySelector('.bkg-modal');
+     modal.classList.remove('bkg-modal--ativo');
+ }
 
-function contar() {
-    count++
-    botaoplus.textContent = count
+ botaoCancelar.addEventListener('click',()=>{
+    fecharModal();
+ })
+
+ function AbrirCarrinho(){
+     const carrinho = document.querySelector('.carrinho');
+     carrinho.classList.add('carrinho--visivel')
 }
+
+  botaoAdicionarAoCarrinho.addEventListener('click',()=>{
+      fecharModal();
+      AbrirCarrinho();
+ })
+
+ btnAdd.addEventListener('click',()=>{
+       quantidadepizza = quantidadepizza + 1;
+       document.getElementById('modal__texto-quant').innerHTML = quantidadepizza;
+ })
+
+ btnMenos.addEventListener('click',()=>{
+    if (quantidadepizza > 1) {
+        quantidadepizza = quantidadepizza - 1;
+        document.getElementById('modal__texto-quant').innerHTML = quantidadepizza;
+        
+    }
+ })
