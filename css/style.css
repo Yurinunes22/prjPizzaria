@@ -12,6 +12,7 @@ align-items: center;
 height: 136px;
 font-family: var(--font-bold);
 font-size: 3rem;
+min-width: 360px;
 }
 
 .topo__marca{
@@ -264,11 +265,13 @@ display: flex;
  width: 40vw;
  padding: 24px;
  border: 2px solid black;
+ align-items: flex-start;
  
 }
 
 .carrinho--visivel{
     display: flex;
+    
 }
 
 .carrinho__titulo{
@@ -397,3 +400,33 @@ padding: 16px;
 .carrinho__btn-finalizar-compra:hover{
     background-color: seagreen;
 }
+
+
+@media screen and (max-width:440px){
+    :root{
+        font-size: 12px;
+    }
+    .rodape{
+        flex-direction: column;
+        height: auto;
+        gap: 16px;
+        padding: 32px;
+    }
+
+    .rodape__redes-sociais{
+        order: -1;
+    }
+
+    .modal{
+        flex-direction: column;
+    }
+
+    .modal .modal__img{
+        width: 30vw;
+    }
+}
+
+
+
+
+
