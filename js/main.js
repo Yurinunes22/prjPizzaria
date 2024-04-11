@@ -9,7 +9,8 @@ const modal = document.querySelector(".bkg-modal");
 let quantidadepizza = parseFloat(document.getElementById('modal__texto-quant').innerHTML);
 const btntamanhopizza = document.querySelectorAll(".modal__tamanho-pizza");
 const tamanhopizza = document.querySelectorAll(".modal__tamanho-pizza");
-
+const btnfecharcarrinho = document.querySelector("#btn__fechar-carrinho");
+const btnabrircarrinhotopo = document.querySelector("#btn__carrinho-topo");
 
 for (let i = 0; i < botaoAdicionarPizza.length; i++) {
     botaoAdicionarPizza[i].addEventListener('click', () => {
@@ -34,6 +35,10 @@ botaoCancelar.addEventListener('click', () => {
 function AbrirCarrinho() {
     const carrinho = document.querySelector('.carrinho');
     carrinho.classList.add('carrinho--visivel')
+}
+function fecharCarrinho() {
+    const carrinho = document.querySelector('.carrinho');
+    carrinho.classList.remove('carrinho--visivel')
 }
 
 botaoAdicionarAoCarrinho.addEventListener('click', () => {
@@ -67,3 +72,10 @@ for (let i = 0; i < btntamanhopizza.length; i++) {
     })
 }
 
+btnfecharcarrinho.addEventListener('click',()=>{
+    fecharCarrinho();
+})
+
+btnabrircarrinhotopo.addEventListener('click',()=>{
+    AbrirCarrinho();
+})
