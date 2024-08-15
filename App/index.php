@@ -1,8 +1,16 @@
 <?php
 require "./config/config.php";
+require "./pages/partials/header.php";
+?>
 
-$meuNome = "Arley";
-echo "Hello world";
+codigo html aqui
 
-var_dump($pdo);
-var_dump($meuNome);
+<?php
+require "./pages/partials/carrinho.php";
+require "./pages/partials/footer.php";
+require "./pages/partials/modal.php";
+?>
+
+
+
+
